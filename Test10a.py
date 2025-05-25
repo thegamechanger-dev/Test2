@@ -580,8 +580,10 @@ def load_config():
         logger.info(getattr(patterns, 'CONFIG_TEMPLATE_CREATED_MESSAGE', 'config.ini template created at {config_file_name}. Please edit it.').format(config_file_name=CONFIG_FILE_NAME))
         os._exit(1)
 
-    config.read(CONFIG_FILE_NAME)
+    # If config.ini exists, read it
     try:
+        config.read(CONFIG_FILE_NAME)
+
         TOKEN = config.get('Bot', 'Token')
         logger.info(f"Loaded token from config.ini: {TOKEN[:10]}... (first 10 chars)")
         if TOKEN == 'YOUR_BOT_TOKEN_HERE' or not TOKEN:
@@ -655,10 +657,13 @@ def load_config():
         logger.info(getattr(patterns, 'CONFIG_LOAD_SUCCESS_MESSAGE', 'Configuration loaded successfully.'))
         if not AUTHORIZED_USERS:
             logger.warning(getattr(patterns, 'NO_AUTHORIZED_USERS_WARNING', 'No authorized users configured. Bot commands may be limited.'))
+        
+        # --- THIS IS THE MISSING RETURN ---
+        return config 
     except Exception as e:
         logger.critical(getattr(patterns, 'CONFIG_LOAD_ERROR_MESSAGE', 'Error loading or parsing config.ini: {e}').format(config_file_name=CONFIG_FILE_NAME, e=e), exc_info=True)
         os._exit(1)
-
+        
 @asynccontextmanager
 async def db_cursor():
     """Context manager for database cursor."""
@@ -5652,7 +5657,45 @@ async def handle_edited_message(update: Update, context: ContextTypes.DEFAULT_TY
     if has_issue:
         logger.info(f"Found issue in edited message: {issue_type}")
         await apply_punishment(context, chat_id, user_id, issue_type, message=message)
+        
+async def cleanup_group_data(context: ContextTypes.DEFAULT_TYPE, chat_id: int) -> None:
+    """
+    Clean up group-specific data when the bot is removed from a group.
 
+    Args:
+        context: Application context containing bot data and cache.
+        chat_id: ID of the group to clean up.
+    """
+    logger.debug(f"Cleaning up data for group {chat_id}")
+
+    try:
+        # Remove group from database
+        await remove_group_from_db(chat_id)
+        logger.info(f"Removed group {chat_id} from database")
+
+        # Clear cached permissions
+        permissions_key = (chat_id, "permissions")
+        if permissions_key in bot_permissions_cache:
+            del bot_permissions_cache[permissions_key]
+            logger.debug(f"Cleared permissions cache for group {chat_id}")
+
+        # Clear permission warning cache
+        for key in list(permission_warning_cache.keys()):
+            if key[0] == chat_id:
+                del permission_warning_cache[key]
+                logger.debug(f"Cleared permission warning cache for group {chat_id}")
+
+        # Clear notification debounce cache
+        if "notification_debounce_cache" in context.bot_data:
+            cache = context.bot_data["notification_debounce_cache"]
+            keys_to_remove = [key for key in cache if key.startswith(f"punish_notification_{chat_id}_")]
+            for key in keys_to_remove:
+                del cache[key]
+            logger.debug(f"Cleared {len(keys_to_remove)} debounce cache entries for group {chat_id}")
+
+    except Exception as e:
+        logger.error(f"Failed to clean up data for group {chat_id}: {e}", exc_info=True)
+        
 async def my_chat_member_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Handle updates to the bot's own chat member status."""
     chat_member_update = update.my_chat_member
@@ -6858,27 +6901,37 @@ async def admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     await update.message.reply_text(message, reply_markup=ReplyKeyboardRemove())
     logger.info(f"/admin command executed by user {update.effective_user.id} in chat {update.effective_chat.id}")
     
+
 # --- Error Handling ---
-# In on_error handler
 async def on_error(update: object | None, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Handler for bot errors."""
+    global bot_config # Ensure bot_config is accessible
+
     if isinstance(context.error, NetworkError):
         logger.warning(f"NetworkError encountered: {context.error}. Bot will retry automatically.")
-    """Handler for bot errors."""
-    logger.error(msg=getattr(patterns, 'ERROR_HANDLER_EXCEPTION', 'Error: {error}').format(error=context.error), exc_info=context.error)
+    
+    logger.error(msg=patterns.ERROR_HANDLER_EXCEPTION.format(error=context.error), exc_info=context.error)
+
+    # Access AUTHORIZED_USERS via global bot_config
+    current_authorized_users = bot_config.admin.get('authorizedusers', []) if bot_config else []
 
     if isinstance(context.error, InvalidToken):
-        logger.critical(getattr(patterns, 'ERROR_HANDLER_INVALID_TOKEN', 'Invalid token.'), exc_info=True)
-        # Consider notifying super admins before exiting
-        for admin_id in AUTHORIZED_USERS:
-            await send_message_safe(context, admin_id, getattr(patterns, 'ERROR_HANDLER_INVALID_TOKEN', 'Invalid token.'))
-        os._exit(1) # Force exit if token is bad
+        logger.critical(patterns.ERROR_HANDLER_INVALID_TOKEN, exc_info=True)
+        # Notify super admins before exiting
+        for admin_id in current_authorized_users:
+            await send_message_safe(context, admin_id, patterns.ERROR_HANDLER_INVALID_TOKEN)
+        
+        # Set global shutdown flag and exit
+        global SHUTTING_DOWN
+        SHUTTING_DOWN = True
+        os._exit(1) # Force exit for invalid token as bot cannot function
 
     elif isinstance(context.error, Forbidden):
-        error_msg = getattr(patterns, 'ERROR_HANDLER_FORBIDDEN', 'Forbidden error: {error}').format(error=context.error)
-        logger.error(error_msg)
-        # Check if the error is related to a specific chat (group/channel)
+        error_msg = patterns.ERROR_HANDLER_FORBIDDEN
+        logger.error(error_msg, exc_info=True) # Log full traceback for Forbidden
+
         chat_id: Optional[int] = None
-        if update and isinstance(update, Update):
+        if isinstance(update, Update):
             if update.effective_chat:
                 chat_id = update.effective_chat.id
             elif update.callback_query and update.callback_query.message and update.callback_query.message.chat:
@@ -6886,274 +6939,283 @@ async def on_error(update: object | None, context: ContextTypes.DEFAULT_TYPE) ->
             elif update.chat_member and update.chat_member.chat:
                  chat_id = update.chat_member.chat.id
 
-
         if chat_id is not None and chat_id < 0: # Group or channel chat
             logger.info(f"Encountered Forbidden error in group/channel {chat_id}. Checking bot status and may remove from DB.")
-            # Attempt to verify bot status and remove group from DB if necessary
             try:
-                # Check if bot is still in the chat using a robust method
+                # Check if bot is still in the chat
                 chat_member = await context.bot.get_chat_member(chat_id, context.bot.id)
                 if chat_member.status in [ChatMemberStatus.LEFT, ChatMemberStatus.BANNED]:
                     await remove_group_from_db(chat_id)
-                    logger.warning(getattr(patterns, 'ERROR_HANDLER_FORBIDDEN_IN_GROUP_REMOVED', 'Forbidden in group {chat_id}, removed.').format(chat_id=chat_id))
+                    logger.warning(patterns.ERROR_HANDLER_FORBIDDEN_IN_GROUP_REMOVED.format(chat_id=chat_id))
                 else:
-                     # Bot is still in the chat but got Forbidden. Log warning.
                      logger.warning(f"Bot encountered Forbidden error in {chat_id} but is still a member/admin. May lack specific permissions.")
             except Exception as e_check:
                  logger.warning(f"Could not confirm bot status in group {chat_id} after Forbidden error: {e_check}. Removing from DB as precaution.")
                  await remove_group_from_db(chat_id)
-                 logger.warning(getattr(patterns, 'ERROR_HANDLER_FORBIDDEN_IN_GROUP_REMOVED', 'Forbidden in group {chat_id}, removed.').format(chat_id=chat_id))
+                 logger.warning(patterns.ERROR_HANDLER_FORBIDDEN_IN_GROUP_REMOVED.format(chat_id=chat_id))
+    
+    # Optional: Notify super admins about errors. Be mindful of message flooding.
+    # For critical errors not leading to exit (e.g., specific BadRequest),
+    # you might want to send a summary.
+    # For now, relying on loggings for less severe errors.
 
-    # For other error types, the general error logging is sufficient, but you can add specific handling here.
-    # e.g., isinstance(context.error, BadRequest), isinstance(context.error, TimedOut), etc.
+Shutting_Down = False
 
-    # Optional: Notify super admins about errors, but be careful not to flood them.
-    # Basic debouncing or rate limiting for admin notifications might be needed.
-    # error_message_for_admin = f"Bot Error: {context.error!s}\nUpdate: {update}"
-    # for admin_id in AUTHORIZED_USERS:
-    #     await send_message_safe(context, admin_id, error_message_for_admin[:4000])
-
-# --- Main Bot Execution ---
-
+# --- Main Function ---
 def main():
-    """Initialize and run the Telegram bot."""
-    load_config()
+    """Initializes and runs the Telegram bot."""
+    global db_pool, SHUTTING_DOWN # SHUTTING_DOWN is modified in this function
+
+    # --- Load Configuration ---
+    # Call load_config to populate global variables. It handles file not found and exits.
+    try:
+        loaded_config = load_config() # load_config now returns the configparser object
+        # This check is crucial because the traceback showed loaded_config CAN be None.
+        if loaded_config is None:
+             logger.critical("Configuration loading failed: loaded_config is None after load_config call. Exiting.")
+             os._exit(1) # Ensure hard exit if it unexpectedly returns None
+    except Exception as e:
+        # This catch is mainly for errors *within* load_config that it might not handle
+        # itself or if a system error prevents `os._exit(1)` from working immediately.
+        logger.critical(patterns.CONFIG_LOAD_ERROR_MESSAGE.format(config_file_name=CONFIG_FILE_NAME, e=e), exc_info=True)
+        os._exit(1) # Ensure exit
+
+    # --- Reconfigure Logging with Loaded Settings ---
+    # Now that LOG_FILE_PATH and LOG_LEVEL (and specific_logger_levels) are updated globally,
+    # re-run setup_logging to apply the desired configuration.
     setup_logging()
 
-    # Apply configurable logger levels
-    specific_logger_levels = getattr(patterns, 'specific_logger_levels', {})
-    for logger_name, level_str in specific_logger_levels.items():
-        level = getattr(logging, level_str, None)
-        if level is not None:
-            try:
-                logging.getLogger(logger_name).setLevel(level)
-                logger.info(f"Set logging level for '{logger_name}' to {level_str}.")
-            except Exception as e:
-                logger.warning(f"Could not set logging level for '{logger_name}' to {level_str}: {e}")
-        else:
-            logger.warning(f"Invalid logging level '{level_str}' for logger '{logger_name}'.")
+    # --- Verify Essential Configurations ---
+    if not TOKEN: # Check the global TOKEN directly
+        logger.critical(patterns.TOKEN_NOT_LOADED_MESSAGE)
+        os._exit(1)
 
-    global TOKEN, DATABASE_NAME
-    if not TOKEN:
-        logger.critical("Bot token not loaded.", exc_info=True)
-        return
-    DATABASE_NAME = getattr(patterns, 'DATABASE_NAME', 'bot.db')
+    if not DATABASE_NAME: # Check the global DATABASE_NAME directly
+        logger.critical("Database name not configured in config.ini. Exiting.")
+        os._exit(1)
 
-    # Apply nest_asyncio
-    try:
-        import nest_asyncio
-        nest_asyncio.apply()
-        logger.debug("Applied nest_asyncio for async compatibility.")
-    except ImportError:
-        logger.info("nest_asyncio not installed. Skipping.")
-    except Exception as e:
-        logger.warning(f"Failed to apply nest_asyncio: {e}")
+    # --- Apply nest_asyncio ---
+    if nest_asyncio:
+        try:
+            nest_asyncio.apply()
+            logger.debug("Applied nest_asyncio for async compatibility.")
+        except Exception as e:
+            logger.warning(f"Failed to apply nest_asyncio: {e}")
+    else:
+        logger.info("nest_asyncio not installed. Skipping. (This might cause issues if you're not in an async loop already.)")
 
     # Suppress asyncio deprecation warnings
     warnings.filterwarnings("ignore", category=DeprecationWarning, module="asyncio")
 
-    # Initialize event loop
-    loop = None
-    try:
-        loop = asyncio.get_event_loop()
-    except RuntimeError as e:
-        if "There is no current event loop in thread" in str(e):
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            logger.debug("Created and set a new event loop.")
-        else:
-            raise
+    # Get the event loop
+    loop = asyncio.get_event_loop()
 
     application = None
     try:
-        # Initialize database
-        loop.run_until_complete(init_db(DATABASE_NAME))
+        # Initialize database using the existing loop
+        loop.run_until_complete(init_db(DATABASE_NAME)) # Use global DATABASE_NAME
         logger.info(f"Initialized database: {DATABASE_NAME}")
 
-        # Build application with increased timeouts
-        application = Application.builder().token(TOKEN).request(
-            HTTPXRequest(http_version="1.1", connect_timeout=90.0, read_timeout=90.0)
-        ).build()
+        # Build application with timeouts from config
+        request_connect_timeout = loaded_config.getfloat('RateLimits', 'UserProfileCheckDelay', fallback=0.1)
+        request_read_timeout = loaded_config.getfloat('RateLimits', 'ResolveUsernameDelay', fallback=0.1)
+
+        application = (
+            Application.builder()
+            .token(TOKEN) # Use global TOKEN
+            .request(
+                HTTPXRequest(
+                    http_version="1.1",
+                    connect_timeout=request_connect_timeout,
+                    read_timeout=request_read_timeout,
+                )
+            )
+            .build()
+        )
         application.start_time_epoch = time.time()
-        logger.info("Built Telegram bot application.")
+
+        # Attach caches to application context for easy access in handlers
+        application.user_profile_cache = TTLCache(
+            maxsize=CACHE_MAXSIZE,
+            ttl=CACHE_TTL_SECONDS
+        )
+        application.username_to_id_cache = TTLCache(
+            maxsize=CACHE_MAXSIZE,
+            ttl=CACHE_TTL_SECONDS
+        )
+        logger.info("Built Telegram bot application and initialized caches.")
+
 
         # Register command handlers
         command_handlers = [
-            ("start", start_command),
-            ("checkallbios", check_all_bios_command),
-            ("populatemembers", populate_group_members),
-            ("listadmins", list_admins),
-            ("checkadminbios", check_admin_bios),
-            ("help", help_command_handler),
-            ("setpunish", set_punish_command),
-            ("setduration", set_duration_command),
+            ("start", start_command), ("help", help_command_handler),
+            ("setpunish", set_punish_command), ("setduration", set_duration_command),
             ("setdurationprofile", set_duration_profile_command),
             ("setdurationmessage", set_duration_message_command),
             ("setdurationmention", set_duration_mention_command),
-            ("freepunish", freepunish_command),
-            ("unfreepunish", unfreepunish_command),
-            ("gfreepunish", gfreepunish_command),
-            ("gunfreepunish", gunfreepunish_command),
-            ("clearcache", clear_cache_command),
-            ("checkbio", check_bio_command),
-            ("setchannel", set_channel_command),
-            ("stats", stats_command),
-            ("disable", disable_command),
-            ("enable", enable_command),
-            ("maintenance", maintenance_command),
-            ("unmuteall", unmuteall_command),
-            ("gunmuteall", gunmuteall_command),
-            ("broadcast", broadcast_command),
-            ("bcastall", bcastall_command),
-            ("bcastself", bcastself_command),
-            ("stopbroadcast", stop_broadcast_command),
+            ("freepunish", freepunish_command), ("unfreepunish", unfreepunish_command),
+            ("gfreepunish", gfreepunish_command), ("gunfreepunish", gunfreepunish_command),
+            ("clearcache", clear_cache_command), ("checkbio", check_bio_command),
+            ("setchannel", set_channel_command), ("stats", stats_command),
+            ("disable", disable_command), ("enable", enable_command),
+            ("maintenance", maintenance_command), ("unmuteall", unmuteall_command),
+            ("gunmuteall", gunmuteall_command), ("broadcast", broadcast_command),
+            ("bcastall", bcastall_command), ("bcastself", bcastself_command),
+            ("stopbroadcast", stop_broadcast_command), ("listadmins", list_admins),
+            ("checkadminbios", check_admin_bios), ("checkallbios", check_all_bios_command),
+            ("populatemembers", populate_group_members),
         ]
-        for cmd, handler in command_handlers:
-            application.add_handler(CommandHandler(cmd, handler))
+        for cmd, handler_func in command_handlers:
+            application.add_handler(CommandHandler(cmd, handler_func))
             logger.debug(f"Registered command handler for /{cmd}")
 
         # Register message handlers
+        authorized_users_filter = filters.User(AUTHORIZED_USERS)
+
         message_handlers = [
             (filters.CONTACT & filters.ChatType.PRIVATE, handle_contact_for_command),
-            (filters.FORWARDED & filters.ChatType.PRIVATE, handle_forwarded_message_for_command),
-            (filters.TEXT & (~filters.COMMAND) & filters.ChatType.GROUPS, handle_message),
-            (filters.CAPTION & (~filters.COMMAND) & filters.ChatType.GROUPS, handle_message),
-            (
-                filters.FORWARDED & filters.ChatType.PRIVATE & filters.User(user_id=AUTHORIZED_USERS) & ~filters.COMMAND,
-                handle_forwarded_channel_message,
-            ),
-            (
-                filters.ChatType.GROUPS,
-                handle_edited_message,
-            ),
+            (filters.FORWARDED & filters.ChatType.PRIVATE & authorized_users_filter, handle_forwarded_channel_message),
+            (filters.FORWARDED & filters.ChatType.PRIVATE & (~authorized_users_filter), handle_forwarded_message_for_command),
+            ((filters.TEXT | filters.CAPTION) & (~filters.COMMAND) & filters.ChatType.GROUPS, handle_message),
         ]
-        for filter_, handler in message_handlers:
-            application.add_handler(MessageHandler(filter_, handler))
-            logger.debug(f"Registered message handler for filter: {filter_}")
+        for filter_obj, handler_func in message_handlers:
+            application.add_handler(MessageHandler(filter_obj, handler_func))
+            logger.debug(f"Registered message handler for filter: {filter_obj}")
+
+        # Specific handler for edited messages in groups
+        application.add_handler(MessageHandler(filters.UpdateType.EDITED_MESSAGE & filters.ChatType.GROUPS, handle_edited_message))
+        logger.debug("Registered message handler for edited messages using filters.UpdateType.EDITED_MESSAGE.")
 
         # Register other handlers
         application.add_handler(CallbackQueryHandler(callbackquery_handler))
         application.add_handler(ChatMemberHandler(chat_member_updated_handler, ChatMemberHandler.CHAT_MEMBER))
         application.add_handler(ChatMemberHandler(my_chat_member_handler, ChatMemberHandler.MY_CHAT_MEMBER))
-        application.add_handler(CallbackQueryHandler(pm_unmute_callback_handler, pattern=r"^pmunmute_attempt_\d+$"))
         application.add_error_handler(on_error)
         logger.debug("Registered callback, chat member, and error handlers.")
 
         # Schedule jobs
         if application.job_queue:
-            cache_cleanup_interval_s = max(CACHE_TTL_SECONDS * 2, 3600)
+            cache_cleanup_interval_s = CACHE_TTL_SECONDS * 2
+            cache_cleanup_interval_s = max(cache_cleanup_interval_s, 3600)
             application.job_queue.run_repeating(
                 cleanup_caches_job,
                 interval=cache_cleanup_interval_s,
                 first=10,
+                name="cache_cleanup",
+                data=application
             )
-            logger.info(
-                f"Scheduled cache cleanup job every {format_duration(cache_cleanup_interval_s)}."
-            )
+            logger.info(patterns.CACHE_CLEANUP_JOB_SCHEDULED_MESSAGE.format(interval=format_duration(cache_cleanup_interval_s)))
+
+            bad_actor_cleanup_interval_s = BAD_ACTOR_EXPIRY_SECONDS
+            if bad_actor_cleanup_interval_s > 0:
+                application.job_queue.run_repeating(
+                    clean_expired_bad_actors,
+                    interval=max(bad_actor_cleanup_interval_s, 60),
+                    first=60,
+                    name="clean_expired_bad_actors"
+                )
+                logger.info(f"Scheduled expired bad actors cleanup job every {format_duration(bad_actor_cleanup_interval_s)}.")
+            else:
+                logger.info("Bad actor expiry duration is 0 (permanent); cleanup job not scheduled.")
+
             loop.run_until_complete(load_and_schedule_timed_broadcasts(application))
         else:
-            logger.warning("JobQueue not available. Skipping job scheduling.")
+            logger.warning(patterns.JOBQUEUE_NOT_AVAILABLE_MESSAGE)
 
-        # Initialize groups with retries
-        for attempt in range(7):  # Increased retries
-            try:
-                loop.run_until_complete(initialize_groups(application))
-                logger.info("Initialized groups from bot updates.")
-                break
-            except TimedOut as e:
-                logger.warning(f"Attempt {attempt + 1}/7: Timed out initializing groups: {e}")
-                if attempt < 6:
-                    time.sleep(7)  # Increased delay
-                else:
-                    logger.error("Failed to initialize groups after 7 attempts. Continuing to polling.")
-            except Exception as e:
-                logger.error(f"Error initializing groups: {e}", exc_info=True)
-                break
+        import telegram
+        logger.info(patterns.BOT_AWAKENS_MESSAGE.format(TG_VER=telegram.__version__))
 
-        logger.info(f"Bot starting (Telegram version: {TG_VER})...")
-        logger.debug(f"Before polling: loop running={loop.is_running()}, closed={loop.is_closed()}")
-        logger.info("Starting polling...")
-        loop.run_until_complete(
-            application.run_polling(
-                allowed_updates=Update.ALL_TYPES,
-                timeout=90,  # Increased polling timeout
-                close_loop=False,
-            )
+        application.run_polling(
+            allowed_updates=Update.ALL_TYPES,
+            timeout=90,
         )
-        logger.info("Polling started successfully.")
 
     except KeyboardInterrupt:
-        logger.info("Received KeyboardInterrupt. Initiating shutdown...")
+        logger.info("Received KeyboardInterrupt. Initiating graceful shutdown...")
+        SHUTTING_DOWN = True
     except InvalidToken:
-        logger.critical("Invalid bot token. Exiting.", exc_info=True)
+        logger.critical(patterns.ERROR_HANDLER_INVALID_TOKEN, exc_info=True)
+        SHUTTING_DOWN = True
     except Exception as e:
         logger.critical(f"Critical error during startup or polling: {e}", exc_info=True)
+        SHUTTING_DOWN = True
     finally:
-        logger.info("Shutting down bot...")
+        SHUTTING_DOWN = True
+        logger.info("Bot is shutting down gracefully...")
+
         if application and application.running:
-            logger.info("Stopping application...")
+            logger.info("Signaling PTB application to stop...")
+            application.stop()
+            logger.info("PTB application stop signal sent.")
+        else:
+            logger.info("PTB application was not running or already stopped.")
+
+        logger.info("Attempting to close database connection pool...")
+        if db_pool is not None and loop and not loop.is_closed():
             try:
-                if loop and not loop.is_closed():
-                    loop.run_until_complete(application.stop())
-                    logger.info("Application stopped.")
-                    loop.run_until_complete(application.shutdown())
-                    logger.info("Application shut down.")
-                    if application.updater:
-                        loop.run_until_complete(application.updater._shutdown_threadpool())
-                        logger.info("Updater threadpool shut down.")
-                else:
-                    logger.warning("Event loop unavailable or closed for application stop/shutdown.")
-            except Exception as e_shutdown:
-                logger.error(f"Error during application shutdown: {e_shutdown}", exc_info=True)
-
-        logger.info("Closing database connection pool...")
-        try:
-            if loop and not loop.is_closed():
                 loop.run_until_complete(close_db_pool())
-                logger.info("Database pool closed.")
-            else:
-                logger.warning("Event loop unavailable or closed for database pool closure.")
-        except Exception as e_db_close:
-            logger.error(f"Error closing database pool: {e_db_close}", exc_info=True)
+                logger.info("Database connection pool closed successfully.")
+            except Exception as e_db_close:
+                logger.error(f"Error closing database pool during shutdown: {e_db_close}", exc_info=True)
+        else:
+            logger.warning("Database pool not initialized or event loop already closed; cannot explicitly close DB pool.")
 
-        try:
-            if loop and not loop.is_closed():
-                logger.info("Cleaning up event loop...")
-                tasks = [
-                    t for t in asyncio.all_tasks(loop=loop)
-                    if t is not asyncio.current_task(loop=loop)
-                ]
+        if loop and not loop.is_closed():
+            try:
+                logger.info("Performing final event loop cleanup...")
+                tasks = [t for t in asyncio.all_tasks(loop=loop) if t is not asyncio.current_task(loop=loop)]
                 if tasks:
-                    logger.info(f"Cancelling {len(tasks)} tasks...")
-                    for task in tasks:
-                        task.cancel()
-                    loop.run_until_complete(asyncio.gather(*tasks, return_exceptions=True))
-                    logger.info("Tasks cancelled.")
+                    logger.info(f"Cancelling {len(tasks)} outstanding asyncio tasks...")
+                    loop.run_until_complete(asyncio.gather(*tasks, return_exceptions=True, timeout=5))
+                    logger.info("Outstanding tasks cancelled.")
+
                 loop.run_until_complete(loop.shutdown_asyncgens())
                 logger.info("Async generators shut down.")
-                loop.run_until_complete(loop.shutdown_default_executor())
-                logger.info("Default executor shut down.")
+
                 loop.close()
                 logger.info("Event loop closed.")
-            else:
-                logger.debug("Event loop already closed or not created.")
-        except Exception as e_loop_cleanup:
-            logger.error(f"Error during loop cleanup: {e_loop_cleanup}", exc_info=True)
+            except Exception as e_loop_cleanup:
+                logger.error(f"Error during final event loop cleanup: {e_loop_cleanup}", exc_info=True)
+        else:
+            logger.info("Event loop already closed or not available for final cleanup (likely due to graceful PTB exit).")
 
-        logger.info("Bot shutdown complete.")
+        logger.info(patterns.BOT_RESTS_MESSAGE)
 
+# --- Script Entry Point ---
 if __name__ == "__main__":
+    # Minimal initial logging setup to catch any immediate errors before main config loads.
+    # This ensures that `logger` is always available.
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        handlers=[
+            logging.StreamHandler() # Only console logging for initial boot-up
+        ]
+    )
+    # Re-get the logger to ensure it's configured by the basic setup
+    logger = logging.getLogger(__name__)
+
     try:
         main()
     except Exception as e_top:
-        logger.critical(f"Top-level unhandled exception: {e_top}", exc_info=True)
-        LOG_FILE_PATH = "bot.log"
-        if LOG_FILE_PATH:
-            try:
-                with open(LOG_FILE_PATH, "a", encoding="utf-8") as f:
-                    f.write(f"\n--- CRITICAL FAILURE AT {datetime.now()} ---\n")
-                    import traceback
-                    traceback.print_exc(file=f)
-                    f.write(f"--- END CRITICAL FAILURE ---\n")
-            except Exception as e_log_final:
-                print(f"Failed to write final error to log: {e_log_final}")
+        logger.critical(patterns.TOP_LEVEL_ERROR_MESSAGE.format(error_details=e_top), exc_info=True)
+        # Attempt to log to the configured file path if possible after a crash
+        # This part ensures that critical errors during `main`'s execution are logged to file.
+        try:
+            # Re-configure logging to file, using the (potentially updated) LOG_FILE_PATH
+            # This is a fallback in case main() crashed before setup_logging could complete.
+            file_handler = logging.FileHandler(LOG_FILE_PATH, encoding="utf-8")
+            file_handler.setFormatter(logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s"))
+            logging.getLogger().addHandler(file_handler) # Add to root logger
+
+            # Log the exception again to ensure it goes to the file
+            logging.getLogger().critical(patterns.TOP_LEVEL_ERROR_MESSAGE.format(error_details=e_top), exc_info=True)
+
+            with open(LOG_FILE_PATH, "a", encoding="utf-8") as f:
+                f.write(f"\n--- CRITICAL FAILURE AT {datetime.now()} ---\n")
+                import traceback
+                traceback.print_exc(file=f)
+                f.write(f"--- END CRITICAL FAILURE ---\n")
+        except Exception as e_log_final:
+            print(f"Failed to write final error to log file {LOG_FILE_PATH}: {e_log_final}")
+
