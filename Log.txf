@@ -1,0 +1,2005 @@
+The bot isn't responding to any command 
+
+https://github.com/thegamechanger-dev/Test2/tree/main 
+
+Here analyze the test11 and find whats wrong 
+
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:31,515 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:31,515 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:31,516 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:31,517 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:31,518 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+33, 'message_reaction': {'chat': {'id': -1002393
+176309, 'title': 'ᗰᗩＳᒎᎥᗪ ᖇᗩᑎᗪᎥᛕᕼᗩᑎᗩ ☪', 'type':
+ 'supergroup'}, 'message_id': 16416, 'user': {'i
+d': 6348518436, 'is_bot': False, 'first_name': '
+Dhruv indore', 'username': 'Hhhhh_336'}, 'date':
+ 1748233349, 'old_reaction': [], 'new_reaction':
+ [{'type': 'emoji', 'emoji': '👍'}]}}]`         
+2025-05-26 04:22:31,518 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557133]            
+2025-05-26 04:22:32,300 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:32,525 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255713
+4, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:32,527 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:32,529 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:32,529 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:32,530 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:32,530 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:32,765 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:3
+2 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'1339'), (b'Connection', b
+'keep-alive'), (b'Strict-Transport-Security', b'
+max-age=31536000; includeSubDomains; preload'), 
+(b'Access-Control-Allow-Origin', b'*'), (b'Acces
+s-Control-Allow-Methods', b'GET, POST, OPTIONS')
+, (b'Access-Control-Expose-Headers', b'Content-L
+ength,Content-Type,Date,Server,Connection')])   
+2025-05-26 04:22:32,765 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:32,765 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:32,766 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:32,766 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:32,766 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:32,766 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+34, 'message': {'message_id': 2442, 'from': {'id
+': 1363371968, 'is_bot': False, 'first_name': 'S
+partan', 'username': 'spartan772'}, 'chat': {'id
+': -1002359750365, 'title': 'Actress bi fap', 't
+ype': 'supergroup'}, 'date': 1748233351, 'messag
+e_thread_id': 2429, 'reply_to_message': {'messag
+e_id': 2432, 'from': {'id': 5673084724, 'is_bot'
+: False, 'first_name': 'Sakshi', 'username': 'qw
+erty_123456889'}, 'chat': {'id': -1002359750365,
+ 'title': 'Actress bi fap', 'type': 'supergroup'
+}, 'date': 1748233332, 'message_thread_id': 2429
+, 'photo': [{'file_id': 'AgACAgUAAyEFAASMpu7dAAI
+JgGgz7HRYVrfW6UbrlEWvpSm5vkzhAALlxjEbCwmhVUoBvCd
+XJ7uVAQADAgADcwADNgQ', 'file_unique_id': 'AQAD5c
+YxGwsJoVV4', 'file_size': 1403, 'width': 90, 'he
+ight': 60}, {'file_id': 'AgACAgUAAyEFAASMpu7dAAI
+JgGgz7HRYVrfW6UbrlEWvpSm5vkzhAALlxjEbCwmhVUoBvCd
+XJ7uVAQADAgADbQADNgQ', 'file_unique_id': 'AQAD5c
+YxGwsJoVVy', 'file_size': 18820, 'width': 320, '
+height': 213}, {'file_id': 'AgACAgUAAyEFAASMpu7d
+AAIJgGgz7HRYVrfW6UbrlEWvpSm5vkzhAALlxjEbCwmhVUoB
+vCdXJ7uVAQADAgADeQADNgQ', 'file_unique_id': 'AQA
+D5cYxGwsJoVV-', 'file_size': 68205, 'width': 933
+, 'height': 622}, {'file_id': 'AgACAgUAAyEFAASMp
+u7dAAIJgGgz7HRYVrfW6UbrlEWvpSm5vkzhAALlxjEbCwmhV
+UoBvCdXJ7uVAQADAgADeAADNgQ', 'file_unique_id': '
+AQAD5cYxGwsJoVV9', 'file_size': 75921, 'width': 
+800, 'height': 533}], 'caption': 'Her reaction a
+fter seeing your dick'}, 'text': 'Uffff'}}]`    
+2025-05-26 04:22:32,766 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557134]            
+2025-05-26 04:22:33,304 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:33,771 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255713
+5, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:33,774 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:33,774 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:33,775 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:33,775 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:33,775 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:33,972 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:3
+3 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'906'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:33,973 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:33,973 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:33,973 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:33,973 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:33,974 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:33,974 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+35, 'message': {'message_id': 1668892, 'from': {
+'id': 7444576187, 'is_bot': False, 'first_name':
+ 'SV'}, 'chat': {'id': -1002433956830, 'title': 
+'Girls chatting group', 'type': 'supergroup'}, '
+date': 1748233352, 'text': "Kinky cuckold husban
+d here. Extremely kinky cuck for my desi dusky s
+outh indian Tamil hotwife. She's modern medium b
+uilt with a seductive slut face like Anushka She
+tty \n\nEnoda goundachi naatu kattai pondati paa
+thu rasichi nalla pachaya pesi Kai adikalama sen
+thu \n\nMature uncles preferred. Need a story on
+ her as I say"}}, {'update_id': 252557136, 'mess
+age': {'message_id': 1668893, 'from': {'id': 649
+1050716, 'is_bot': False, 'first_name': '❥𝙎𝙪𝙢𝙖𝙣~
+•🍁⁙⁂•°᭄'}, 'chat': {'id': -1002433956830, 'titl
+e': 'Girls chatting group', 'type': 'supergroup'
+}, 'date': 1748233353, 'text': 'Hi'}}]`         
+2025-05-26 04:22:33,975 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557135, 252557136] 
+2025-05-26 04:22:34,308 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:34,983 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255713
+7, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:34,987 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:34,989 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:34,989 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:34,990 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:34,991 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:35,202 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:3
+4 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'923'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:35,203 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:35,204 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:35,204 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:35,204 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:35,206 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:35,208 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+37, 'chat_member': {'chat': {'id': -100235975036
+5, 'title': 'Actress bi fap', 'type': 'supergrou
+p'}, 'from': {'id': 7995660599, 'is_bot': False,
+ 'first_name': 'Max-R'}, 'date': 1748233354, 'ol
+d_chat_member': {'user': {'id': 1062493449, 'is_
+bot': False, 'first_name': 'Shree😘', 'username'
+: 'Homie2001'}, 'status': 'member'}, 'new_chat_m
+ember': {'user': {'id': 1062493449, 'is_bot': Fa
+lse, 'first_name': 'Shree😘', 'username': 'Homie
+2001'}, 'status': 'restricted', 'until_date': 0,
+ 'can_send_messages': False, 'can_send_media_mes
+sages': False, 'can_send_audios': False, 'can_se
+nd_documents': False, 'can_send_photos': False, 
+'can_send_videos': False, 'can_send_video_notes'
+: False, 'can_send_voice_notes': False, 'can_sen
+d_polls': False, 'can_send_other_messages': Fals
+e, 'can_add_web_page_previews': False, 'can_chan
+ge_info': False, 'can_invite_users': False, 'can
+_pin_messages': False, 'can_manage_topics': True
+, 'is_member': True}}}]`                        
+2025-05-26 04:22:35,208 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557137]            
+2025-05-26 04:22:35,311 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:36,216 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255713
+8, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:36,221 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:36,222 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:36,222 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:36,223 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:36,223 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:36,314 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:36,419 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:3
+6 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'296'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:36,420 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:36,420 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:36,421 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:36,421 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:36,421 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:36,422 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+38, 'message': {'message_id': 1668894, 'from': {
+'id': 8118232609, 'is_bot': False, 'first_name':
+ 'Jaat'}, 'chat': {'id': -1002433956830, 'title'
+: 'Girls chatting group', 'type': 'supergroup'},
+ 'date': 1748233355, 'text': 'Koi Rajasthani ya 
+haryanavi married female h kya'}}]`             
+2025-05-26 04:22:36,422 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557138]            
+2025-05-26 04:22:37,317 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:37,426 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255713
+9, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:37,431 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:37,432 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:37,432 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:37,434 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:37,434 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:37,730 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:3
+7 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'316'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:37,731 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:37,731 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:37,732 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:37,733 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:37,733 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:37,734 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+39, 'message': {'message_id': 1668895, 'from': {
+'id': 5995476986, 'is_bot': False, 'first_name':
+ 'Premmmm❤️⛓️', 'username': 'Godsfavouritechild07'
+}, 'chat': {'id': -1002433956830, 'title': 'Girl
+s chatting group', 'type': 'supergroup'}, 'date'
+: 1748233356, 'text': 'Marathi'}}]`             
+2025-05-26 04:22:37,734 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557139]            
+2025-05-26 04:22:38,321 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:38,738 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255714
+0, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:38,739 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:38,740 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:38,740 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:38,741 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:38,741 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:39,323 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:39,577 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:3
+9 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'467'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:39,578 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:39,579 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:39,579 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:39,580 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:39,580 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:39,580 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+40, 'message': {'message_id': 16429, 'from': {'i
+d': 7961181057, 'is_bot': False, 'first_name': '
+𝙳𝙴𝙼𝙾𝙽ㅤ♠', 'username': 'Tnsk7'}, 'chat': {'id': 
+-1002393176309, 'title': 'ᗰᗩＳᒎᎥᗪ ᖇᗩᑎᗪᎥᛕᕼᗩᑎᗩ ☪',
+ 'type': 'supergroup'}, 'date': 1748233359, 'tex
+t': 'Koi mulli Ldki zalel hoke chudna chahti hai
+ dm kro'}}]`                                    
+2025-05-26 04:22:39,581 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557140]            
+2025-05-26 04:22:40,324 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:40,583 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255714
+1, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:40,584 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:40,585 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:40,585 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:40,585 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:40,585 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:40,780 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:4
+0 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'1478'), (b'Connection', b
+'keep-alive'), (b'Strict-Transport-Security', b'
+max-age=31536000; includeSubDomains; preload'), 
+(b'Access-Control-Allow-Origin', b'*'), (b'Acces
+s-Control-Allow-Methods', b'GET, POST, OPTIONS')
+, (b'Access-Control-Expose-Headers', b'Content-L
+ength,Content-Type,Date,Server,Connection')])   
+2025-05-26 04:22:40,780 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:40,780 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:40,780 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:40,780 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:40,780 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:40,781 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+41, 'message': {'message_id': 2386, 'from': {'id
+': 7281902427, 'is_bot': False, 'first_name': 'M
+anager', 'username': 'Grpmamagementservice', 'la
+nguage_code': 'en'}, 'chat': {'id': 7281902427, 
+'first_name': 'Manager', 'username': 'Grpmamagem
+entservice', 'type': 'private'}, 'date': 1748233
+359, 'text': '/start', 'entities': [{'offset': 0
+, 'length': 6, 'type': 'bot_command'}]}}, {'upda
+te_id': 252557142, 'message': {'message_id': 238
+7, 'from': {'id': 7281902427, 'is_bot': False, '
+first_name': 'Manager', 'username': 'Grpmamageme
+ntservice', 'language_code': 'en'}, 'chat': {'id
+': 7281902427, 'first_name': 'Manager', 'usernam
+e': 'Grpmamagementservice', 'type': 'private'}, 
+'date': 1748233359, 'text': '/start', 'entities'
+: [{'offset': 0, 'length': 6, 'type': 'bot_comma
+nd'}]}}, {'update_id': 252557143, 'message': {'m
+essage_id': 2388, 'from': {'id': 7281902427, 'is
+_bot': False, 'first_name': 'Manager', 'username
+': 'Grpmamagementservice', 'language_code': 'en'
+}, 'chat': {'id': 7281902427, 'first_name': 'Man
+ager', 'username': 'Grpmamagementservice', 'type
+': 'private'}, 'date': 1748233359, 'text': '/sta
+rt', 'entities': [{'offset': 0, 'length': 6, 'ty
+pe': 'bot_command'}]}}, {'update_id': 252557144,
+ 'message': {'message_id': 2389, 'from': {'id': 
+7281902427, 'is_bot': False, 'first_name': 'Mana
+ger', 'username': 'Grpmamagementservice', 'langu
+age_code': 'en'}, 'chat': {'id': 7281902427, 'fi
+rst_name': 'Manager', 'username': 'Grpmamagement
+service', 'type': 'private'}, 'date': 1748233359
+, 'text': '/start', 'entities': [{'offset': 0, '
+length': 6, 'type': 'bot_command'}]}}]`         
+2025-05-26 04:22:40,781 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557141, 252557142, 
+252557143, 252557144]                           
+2025-05-26 04:22:41,326 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:41,787 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255714
+5, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:41,790 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:41,791 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:41,791 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:41,792 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:41,792 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:41,991 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:4
+1 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'312'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:41,992 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:41,992 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:41,993 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:41,993 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:41,994 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:41,995 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+45, 'message': {'message_id': 1668896, 'from': {
+'id': 7329352189, 'is_bot': False, 'first_name':
+ 'Karthik'}, 'chat': {'id': -1002433956830, 'tit
+le': 'Girls chatting group', 'type': 'supergroup
+'}, 'date': 1748233360, 'text': 'Yarru avanga ve
+etu pombalaiya aduthavan okka vittu pakka asai'}
+}]`                                             
+2025-05-26 04:22:41,996 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557145]            
+2025-05-26 04:22:42,330 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:43,000 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255714
+6, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:43,001 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:43,002 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:43,002 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:43,003 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:43,003 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:43,332 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:44,267 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:4
+3 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'397'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:44,267 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:44,268 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:44,268 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:44,268 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:44,269 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:44,270 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+46, 'message': {'message_id': 2390, 'from': {'id
+': 7281902427, 'is_bot': False, 'first_name': 'M
+anager', 'username': 'Grpmamagementservice', 'la
+nguage_code': 'en'}, 'chat': {'id': 7281902427, 
+'first_name': 'Manager', 'username': 'Grpmamagem
+entservice', 'type': 'private'}, 'date': 1748233
+363, 'text': '/maintenance off', 'entities': [{'
+offset': 0, 'length': 12, 'type': 'bot_command'}
+]}}]`                                           
+2025-05-26 04:22:44,270 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557146]            
+2025-05-26 04:22:44,334 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:45,276 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255714
+7, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:45,279 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:45,281 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:45,281 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:45,281 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:45,282 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:45,337 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:45,494 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:4
+5 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'1019'), (b'Connection', b
+'keep-alive'), (b'Strict-Transport-Security', b'
+max-age=31536000; includeSubDomains; preload'), 
+(b'Access-Control-Allow-Origin', b'*'), (b'Acces
+s-Control-Allow-Methods', b'GET, POST, OPTIONS')
+, (b'Access-Control-Expose-Headers', b'Content-L
+ength,Content-Type,Date,Server,Connection')])   
+2025-05-26 04:22:45,494 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:45,495 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:45,495 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:45,495 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:45,496 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:45,496 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+47, 'message': {'message_id': 1668897, 'from': {
+'id': 7613640381, 'is_bot': False, 'first_name':
+ 'V'}, 'chat': {'id': -1002433956830, 'title': '
+Girls chatting group', 'type': 'supergroup'}, 'd
+ate': 1748233364, 'text': 'Handsome Tamil guy25 
+from Cbe here \nGirls Dm !'}}, {'update_id': 252
+557148, 'message': {'message_id': 1668898, 'from
+': {'id': 7896758512, 'is_bot': False, 'first_na
+me': 'Ankit'}, 'chat': {'id': -1002433956830, 't
+itle': 'Girls chatting group', 'type': 'supergro
+up'}, 'date': 1748233365, 'text': '𝖠𝗇𝗒 𝗈𝗉𝖾𝗇-𝗆𝗂𝗇𝖽
+𝖾𝖽 𝗅𝖺𝖽𝗒 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗆𝖾 𝖿𝗈𝗋 𝖿𝗋𝗂𝖾𝗇𝖽𝗅𝗒 𝗍𝖺𝗅𝗄'}}]`       
+2025-05-26 04:22:45,496 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557147, 252557148] 
+2025-05-26 04:22:46,339 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:46,499 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255714
+9, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:46,500 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:46,501 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:46,502 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:46,503 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:46,503 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:46,702 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:4
+6 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'889'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:46,702 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:46,702 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:46,702 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:46,703 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:46,703 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:46,703 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+49, 'message': {'message_id': 1668899, 'from': {
+'id': 7912081626, 'is_bot': False, 'first_name':
+ 'Alone'}, 'chat': {'id': -1002433956830, 'title
+': 'Girls chatting group', 'type': 'supergroup'}
+, 'date': 1748233366, 'message_thread_id': 16685
+84, 'reply_to_message': {'message_id': 1668584, 
+'from': {'id': 6686916074, 'is_bot': False, 'fir
+st_name': '🥰'}, 'chat': {'id': -1002433956830, 
+'title': 'Girls chatting group', 'type': 'superg
+roup'}, 'date': 1748232746, 'text': 'Nud servic 
+tamil'}, 'text': 'She is trusted'}}, {'update_id
+': 252557150, 'message': {'message_id': 2391, 'f
+rom': {'id': 7281902427, 'is_bot': False, 'first
+_name': 'Manager', 'username': 'Grpmamagementser
+vice', 'language_code': 'en'}, 'chat': {'id': 72
+81902427, 'first_name': 'Manager', 'username': '
+Grpmamagementservice', 'type': 'private'}, 'date
+': 1748233366, 'text': '/start', 'entities': [{'
+offset': 0, 'length': 6, 'type': 'bot_command'}]
+}}]`                                            
+2025-05-26 04:22:46,704 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557149, 252557150] 
+2025-05-26 04:22:47,340 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:47,707 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255715
+1, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:47,710 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:47,711 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:47,711 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:47,712 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:47,712 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:47,907 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:4
+7 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'386'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:47,908 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:47,908 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:47,908 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:47,909 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:47,909 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:47,910 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+51, 'message': {'message_id': 2392, 'from': {'id
+': 7281902427, 'is_bot': False, 'first_name': 'M
+anager', 'username': 'Grpmamagementservice', 'la
+nguage_code': 'en'}, 'chat': {'id': 7281902427, 
+'first_name': 'Manager', 'username': 'Grpmamagem
+entservice', 'type': 'private'}, 'date': 1748233
+366, 'text': '/start', 'entities': [{'offset': 0
+, 'length': 6, 'type': 'bot_command'}]}}]`      
+2025-05-26 04:22:47,910 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557151]            
+2025-05-26 04:22:48,341 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:48,913 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255715
+2, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:48,915 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:48,916 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:48,916 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:48,917 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:48,917 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:49,149 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:4
+8 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'1297'), (b'Connection', b
+'keep-alive'), (b'Strict-Transport-Security', b'
+max-age=31536000; includeSubDomains; preload'), 
+(b'Access-Control-Allow-Origin', b'*'), (b'Acces
+s-Control-Allow-Methods', b'GET, POST, OPTIONS')
+, (b'Access-Control-Expose-Headers', b'Content-L
+ength,Content-Type,Date,Server,Connection')])   
+2025-05-26 04:22:49,149 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:49,150 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:49,150 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:49,150 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:49,151 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:49,152 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+52, 'message': {'message_id': 2393, 'from': {'id
+': 7281902427, 'is_bot': False, 'first_name': 'M
+anager', 'username': 'Grpmamagementservice', 'la
+nguage_code': 'en'}, 'chat': {'id': 7281902427, 
+'first_name': 'Manager', 'username': 'Grpmamagem
+entservice', 'type': 'private'}, 'date': 1748233
+368, 'text': '/start', 'entities': [{'offset': 0
+, 'length': 6, 'type': 'bot_command'}]}}, {'upda
+te_id': 252557153, 'message': {'message_id': 164
+30, 'from': {'id': 7829133721, 'is_bot': False, 
+'first_name': 'ZAMKIYA', 'last_name': 'DIPAK'}, 
+'chat': {'id': -1002393176309, 'title': 'ᗰᗩＳᒎᎥᗪ
+ ᖇᗩᑎᗪᎥᛕᕼᗩᑎᗩ ☪', 'type': 'supergroup'}, 'date': 1
+748233368, 'text': 'रंडी बनाकर चोदूंगा नंगी होकर कौन
+ चुदवाएगी'}}, {'update_id': 252557154, 'message':
+ {'message_id': 2394, 'from': {'id': 7281902427,
+ 'is_bot': False, 'first_name': 'Manager', 'user
+name': 'Grpmamagementservice', 'language_code': 
+'en'}, 'chat': {'id': 7281902427, 'first_name': 
+'Manager', 'username': 'Grpmamagementservice', '
+type': 'private'}, 'date': 1748233368, 'text': '
+/start', 'entities': [{'offset': 0, 'length': 6,
+ 'type': 'bot_command'}]}}]`                    
+2025-05-26 04:22:49,152 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557152, 252557153, 
+252557154]                                      
+2025-05-26 04:22:49,343 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:50,155 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255715
+5, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:50,157 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:50,158 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:50,159 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:50,159 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:50,159 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:50,344 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:50,369 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:5
+0 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'1762'), (b'Connection', b
+'keep-alive'), (b'Strict-Transport-Security', b'
+max-age=31536000; includeSubDomains; preload'), 
+(b'Access-Control-Allow-Origin', b'*'), (b'Acces
+s-Control-Allow-Methods', b'GET, POST, OPTIONS')
+, (b'Access-Control-Expose-Headers', b'Content-L
+ength,Content-Type,Date,Server,Connection')])   
+2025-05-26 04:22:50,369 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:50,370 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:50,370 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:50,370 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:50,371 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:50,371 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+55, 'chat_member': {'chat': {'id': -100235975036
+5, 'title': 'Actress bi fap', 'type': 'supergrou
+p'}, 'from': {'id': 1062493449, 'is_bot': False,
+ 'first_name': 'Shree😘', 'username': 'Homie2001
+'}, 'date': 1748233369, 'old_chat_member': {'use
+r': {'id': 1062493449, 'is_bot': False, 'first_n
+ame': 'Shree😘', 'username': 'Homie2001'}, 'stat
+us': 'restricted', 'until_date': 0, 'can_send_me
+ssages': False, 'can_send_media_messages': False
+, 'can_send_audios': False, 'can_send_documents'
+: False, 'can_send_photos': False, 'can_send_vid
+eos': False, 'can_send_video_notes': False, 'can
+_send_voice_notes': False, 'can_send_polls': Fal
+se, 'can_send_other_messages': False, 'can_add_w
+eb_page_previews': False, 'can_change_info': Fal
+se, 'can_invite_users': False, 'can_pin_messages
+': False, 'can_manage_topics': True, 'is_member'
+: True}, 'new_chat_member': {'user': {'id': 1062
+493449, 'is_bot': False, 'first_name': 'Shree😘'
+, 'username': 'Homie2001'}, 'status': 'restricte
+d', 'until_date': 0, 'can_send_messages': False,
+ 'can_send_media_messages': False, 'can_send_aud
+ios': False, 'can_send_documents': False, 'can_s
+end_photos': False, 'can_send_videos': False, 'c
+an_send_video_notes': False, 'can_send_voice_not
+es': False, 'can_send_polls': False, 'can_send_o
+ther_messages': False, 'can_add_web_page_preview
+s': False, 'can_change_info': False, 'can_invite
+_users': False, 'can_pin_messages': False, 'can_
+manage_topics': True, 'is_member': False}}}, {'u
+pdate_id': 252557156, 'message': {'message_id': 
+2395, 'from': {'id': 7281902427, 'is_bot': False
+, 'first_name': 'Manager', 'username': 'Grpmamag
+ementservice', 'language_code': 'en'}, 'chat': {
+'id': 7281902427, 'first_name': 'Manager', 'user
+name': 'Grpmamagementservice', 'type': 'private'
+}, 'date': 1748233369, 'text': '/start', 'entiti
+es': [{'offset': 0, 'length': 6, 'type': 'bot_co
+mmand'}]}}]`                                    
+2025-05-26 04:22:50,372 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557155, 252557156] 
+2025-05-26 04:22:51,347 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:51,375 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255715
+7, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:51,378 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:51,380 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:51,380 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:51,381 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:51,381 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:51,623 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:5
+1 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'2851'), (b'Connection', b
+'keep-alive'), (b'Strict-Transport-Security', b'
+max-age=31536000; includeSubDomains; preload'), 
+(b'Access-Control-Allow-Origin', b'*'), (b'Acces
+s-Control-Allow-Methods', b'GET, POST, OPTIONS')
+, (b'Access-Control-Expose-Headers', b'Content-L
+ength,Content-Type,Date,Server,Connection')])   
+2025-05-26 04:22:51,624 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:51,624 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:51,624 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:51,625 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:51,625 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:51,625 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+57, 'message': {'message_id': 2396, 'from': {'id
+': 7281902427, 'is_bot': False, 'first_name': 'M
+anager', 'username': 'Grpmamagementservice', 'la
+nguage_code': 'en'}, 'chat': {'id': 7281902427, 
+'first_name': 'Manager', 'username': 'Grpmamagem
+entservice', 'type': 'private'}, 'date': 1748233
+370, 'text': '/start', 'entities': [{'offset': 0
+, 'length': 6, 'type': 'bot_command'}]}}, {'upda
+te_id': 252557158, 'message': {'message_id': 166
+8900, 'from': {'id': 7260109104, 'is_bot': False
+, 'first_name': 'Monisha', 'last_name': 'S'}, 'c
+hat': {'id': -1002433956830, 'title': 'Girls cha
+tting group', 'type': 'supergroup'}, 'date': 174
+8233369, 'message_thread_id': 1668879, 'reply_to
+_message': {'message_id': 1668890, 'from': {'id'
+: 8017071109, 'is_bot': False, 'first_name': 'Ar
+un Kumar'}, 'chat': {'id': -1002433956830, 'titl
+e': 'Girls chatting group', 'type': 'supergroup'
+}, 'date': 1748233348, 'message_thread_id': 1668
+879, 'text': 'Na free'}, 'text': 'Only pai d ok'
+}}, {'update_id': 252557159, 'message': {'messag
+e_id': 1668901, 'from': {'id': 6513078321, 'is_b
+ot': False, 'first_name': 'Ayurveda Soft Touch M
+assage', 'last_name': 'Service'}, 'chat': {'id':
+ -1002433956830, 'title': 'Girls chatting group'
+, 'type': 'supergroup'}, 'date': 1748233370, 'te
+xt': '💆 AYURVEDA SOFT TOUCH MASSAGING CALICUT O
+R MALAPPURAM💆\n\n- Ayurveda മസ്റ്റാജ് നോക്കുന്ന സ്ത്രിക
+ൾ ഉണ്ടോ എന്നാൽ വന്നോളൂ . Ayurvedic എല്ലാവിത Normal മസ്
+റ്റാജ്കളും ഉണ്ടാവുന്നതാണ്.\n\n- Full Body Oil Massage -
+\n- Foot Massage -\n- Head Massage -\n- Body Pai
+n Massage -\n- Thai Massage - \n- Licking Massag
+ing -\n- Sandwich Massage -\n\nഇത് ഒരു Relaxation 
+മസ്റ്റാജ് ആണ് കൊടുക്കുന്നത്. Coustomers പറയുന്ന സ്ഥലത്ത് വന്നിട്
+ടും മസ്റ്റാജ് ചയ്ത് കൊടുക്കുന്നതാണ്.\n\nAyurvedic Massage ന
+ോക്കുന്ന സ്ത്രീകൾ മാത്രം വരിക. കൂടുതൽ Details അറിയിക്കുന്നത
+ാണ്.\n\nPlace in Calicut or Malapuram'}}]`       
+2025-05-26 04:22:51,626 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557157, 252557158, 
+252557159]                                      
+2025-05-26 04:22:52,349 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:52,631 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+0, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:52,633 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:52,634 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:52,634 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:52,634 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:52,635 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:52,843 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:5
+2 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'312'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:52,843 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:52,843 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:52,844 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:52,844 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:52,845 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:52,846 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+60, 'message': {'message_id': 1668902, 'from': {
+'id': 7329352189, 'is_bot': False, 'first_name':
+ 'Karthik'}, 'chat': {'id': -1002433956830, 'tit
+le': 'Girls chatting group', 'type': 'supergroup
+'}, 'date': 1748233372, 'text': 'Yarru avanga ve
+etu pombalaiya aduthavan okka vittu pakka asai'}
+}]`                                             
+2025-05-26 04:22:52,846 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557160]            
+2025-05-26 04:22:53,354 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:53,852 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+1, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:53,855 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:53,856 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:53,856 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:53,857 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:53,857 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:54,095 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:5
+3 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'668'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:54,096 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:54,097 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:54,097 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:54,097 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:54,098 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:54,098 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+61, 'message': {'message_id': 1668903, 'from': {
+'id': 1770955507, 'is_bot': False, 'first_name':
+ 'komal', 'last_name': 'sharma', 'username': 'ko
+malsharma9777'}, 'chat': {'id': -1002433956830, 
+'title': 'Girls chatting group', 'type': 'superg
+roup'}, 'date': 1748233372, 'text': 'चूदाई\xa0 कर
+ो वीडियो कॉल पर मगर प्यार से शगुन देके💕❤️💋(फ्री मे कुछ 
+नहीं है)'}}]`                                     
+2025-05-26 04:22:54,099 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557161]            
+2025-05-26 04:22:54,357 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:55,105 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+2, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:55,107 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:55,108 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:55,108 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:55,108 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:55,109 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:55,362 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:56,368 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:56,548 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:5
+6 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'595'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:56,549 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:56,549 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:56,550 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:56,550 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:56,550 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:56,551 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+62, 'message': {'message_id': 1668904, 'from': {
+'id': 965884030, 'is_bot': False, 'first_name': 
+'Akhil', 'last_name': 'Shiva'}, 'chat': {'id': -
+1002433956830, 'title': 'Girls chatting group', 
+'type': 'supergroup'}, 'date': 1748233375, 'mess
+age_thread_id': 1668877, 'reply_to_message': {'m
+essage_id': 1668877, 'from': {'id': 7329352189, 
+'is_bot': False, 'first_name': 'Karthik'}, 'chat
+': {'id': -1002433956830, 'title': 'Girls chatti
+ng group', 'type': 'supergroup'}, 'date': 174823
+3319, 'text': 'Cuck husband any'}, 'text': '/are
+ you gay', 'entities': [{'offset': 0, 'length': 
+4, 'type': 'bot_command'}]}}]`                  
+2025-05-26 04:22:56,551 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557162]            
+2025-05-26 04:22:57,371 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:57,557 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+3, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:57,559 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:57,560 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:57,560 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:57,561 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:57,561 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:22:58,374 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:58,934 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:22:5
+8 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'569'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:22:58,935 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:22:58,935 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:22:58,935 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:22:58,936 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:22:58,936 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:22:58,937 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+63, 'message': {'message_id': 84807, 'from': {'i
+d': 7829133721, 'is_bot': False, 'first_name': '
+ZAMKIYA', 'last_name': 'DIPAK'}, 'chat': {'id': 
+-1002668795825, 'title': 'ᗰᗩ乙ᕼᗩᗷᎥ ᗩ* ᒪᎥᗰᗩ', 'ty
+pe': 'supergroup'}, 'date': 1748233378, 'text': 
+'रंडी बनाकर चोदूंगा नंगी होकर कौन चुदवाएगी', 'has_pro
+tected_content': True}}]`                       
+2025-05-26 04:22:58,937 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557163]            
+2025-05-26 04:22:59,376 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:22:59,940 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+4, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:22:59,943 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:22:59,944 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:22:59,944 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:22:59,945 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:22:59,945 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:23:00,379 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:00,816 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:23:0
+0 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'397'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:23:00,817 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:23:00,817 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:23:00,817 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:23:00,818 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:23:00,818 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:23:00,819 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+64, 'message': {'message_id': 2397, 'from': {'id
+': 7281902427, 'is_bot': False, 'first_name': 'M
+anager', 'username': 'Grpmamagementservice', 'la
+nguage_code': 'en'}, 'chat': {'id': 7281902427, 
+'first_name': 'Manager', 'username': 'Grpmamagem
+entservice', 'type': 'private'}, 'date': 1748233
+380, 'text': '/maintenance off', 'entities': [{'
+offset': 0, 'length': 12, 'type': 'bot_command'}
+]}}]`                                           
+2025-05-26 04:23:00,819 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557164]            
+2025-05-26 04:23:01,380 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:01,823 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+5, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:23:01,826 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:23:01,827 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:23:01,829 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:23:01,830 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:23:01,831 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:23:02,029 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:23:0
+1 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'400'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:23:02,029 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:23:02,030 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:23:02,030 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:23:02,030 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:23:02,030 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:23:02,031 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+65, 'message': {'message_id': 1668906, 'from': {
+'id': 7624135877, 'is_bot': False, 'first_name':
+ 'Deleted', 'last_name': 'Account', 'username': 
+'Doodliewoodliewoowooo'}, 'chat': {'id': -100243
+3956830, 'title': 'Girls chatting group', 'type'
+: 'supergroup'}, 'date': 1748233381, 'text': 'Ko
+i meri bohot sundar muslim irl classmate ki phot
+os dekh kr video call me hilayega sath me?'}}]` 
+2025-05-26 04:23:02,031 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557165]            
+2025-05-26 04:23:02,385 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:03,037 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+6, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:23:03,040 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:23:03,041 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:23:03,042 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:23:03,042 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:23:03,043 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:23:03,250 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:23:0
+2 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'490'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:23:03,251 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:23:03,251 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:23:03,251 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:23:03,252 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:23:03,255 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:23:03,256 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+66, 'message': {'message_id': 24905, 'from': {'i
+d': 6348518436, 'is_bot': False, 'first_name': '
+Dhruv indore', 'username': 'Hhhhh_336'}, 'chat':
+ {'id': -1002457183965, 'title': 'ᑎᗩᗰᗩ乙 -ᗴ- ᑕᕼᑌ
+ᗪᗩᎥ ☪', 'type': 'supergroup'}, 'date': 174823338
+2, 'text': 'Dhruv 23 call boy indore', 'entities
+': [{'offset': 0, 'length': 24, 'type': 'blockqu
+ote'}, {'offset': 0, 'length': 24, 'type': 'bold
+'}], 'has_protected_content': True}}]`          
+2025-05-26 04:23:03,256 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557166]            
+2025-05-26 04:23:03,387 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:04,263 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+7, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:23:04,265 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:23:04,266 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:23:04,267 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:23:04,267 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:23:04,267 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:23:04,390 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:05,396 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:06,400 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:06,467 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:23:0
+6 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'23'), (b'Connection', b'k
+eep-alive'), (b'Strict-Transport-Security', b'ma
+x-age=31536000; includeSubDomains; preload'), (b
+'Access-Control-Allow-Origin', b'*'), (b'Access-
+Control-Allow-Methods', b'GET, POST, OPTIONS'), 
+(b'Access-Control-Expose-Headers', b'Content-Len
+gth,Content-Type,Date,Server,Connection')])     
+2025-05-26 04:23:06,468 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:23:06,468 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:23:06,468 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:23:06,469 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:23:06,469 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:23:06,470 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[]`                   
+2025-05-26 04:23:06,470 - telegram.ext.ExtBot - 
+DEBUG - No new updates found.                   
+2025-05-26 04:23:07,406 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:07,475 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+7, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:23:07,478 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:23:07,479 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:23:07,479 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:23:07,480 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:23:07,480 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:23:07,767 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:23:0
+7 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'312'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:23:07,768 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:23:07,768 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:23:07,768 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:23:07,768 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:23:07,769 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:23:07,769 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+67, 'message': {'message_id': 1668907, 'from': {
+'id': 7329352189, 'is_bot': False, 'first_name':
+ 'Karthik'}, 'chat': {'id': -1002433956830, 'tit
+le': 'Girls chatting group', 'type': 'supergroup
+'}, 'date': 1748233386, 'text': 'Yarru avanga ve
+etu pombalaiya aduthavan okka vittu pakka asai'}
+}]`                                             
+2025-05-26 04:23:07,769 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557167]            
+2025-05-26 04:23:08,408 - __main__ - DEBUG - Run
+ning event still set, continuing...             
+2025-05-26 04:23:08,777 - telegram.ext.ExtBot - 
+DEBUG - Calling Bot API endpoint `getUpdates` wi
+th parameters `{'timeout': 2, 'offset': 25255716
+8, 'allowed_updates': [<UpdateType.MESSAGE>, <Up
+dateType.EDITED_MESSAGE>, <UpdateType.CHANNEL_PO
+ST>, <UpdateType.EDITED_CHANNEL_POST>, <UpdateTy
+pe.INLINE_QUERY>, <UpdateType.CHOSEN_INLINE_RESU
+LT>, <UpdateType.CALLBACK_QUERY>, <UpdateType.SH
+IPPING_QUERY>, <UpdateType.PRE_CHECKOUT_QUERY>, 
+<UpdateType.POLL>, <UpdateType.POLL_ANSWER>, <Up
+dateType.MY_CHAT_MEMBER>, <UpdateType.CHAT_MEMBE
+R>, <UpdateType.CHAT_JOIN_REQUEST>, <UpdateType.
+CHAT_BOOST>, <UpdateType.REMOVED_CHAT_BOOST>, <U
+pdateType.MESSAGE_REACTION>, <UpdateType.MESSAGE
+_REACTION_COUNT>, <UpdateType.BUSINESS_CONNECTIO
+N>, <UpdateType.BUSINESS_MESSAGE>, <UpdateType.E
+DITED_BUSINESS_MESSAGE>, <UpdateType.DELETED_BUS
+INESS_MESSAGES>, <UpdateType.PURCHASED_PAID_MEDI
+A>]}`                                           
+2025-05-26 04:23:08,781 - httpcore.http11 - DEBU
+G - send_request_headers.started request=<Reques
+t [b'POST']>                                    
+2025-05-26 04:23:08,782 - httpcore.http11 - DEBU
+G - send_request_headers.complete               
+2025-05-26 04:23:08,783 - httpcore.http11 - DEBU
+G - send_request_body.started request=<Request [
+b'POST']>                                       
+2025-05-26 04:23:08,784 - httpcore.http11 - DEBU
+G - send_request_body.complete                  
+2025-05-26 04:23:08,784 - httpcore.http11 - DEBU
+G - receive_response_headers.started request=<Re
+quest [b'POST']>                                
+2025-05-26 04:23:09,071 - httpcore.http11 - DEBU
+G - receive_response_headers.complete return_val
+ue=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'ngin
+x/1.18.0'), (b'Date', b'Mon, 26 May 2025 04:23:0
+8 GMT'), (b'Content-Type', b'application/json'),
+ (b'Content-Length', b'288'), (b'Connection', b'
+keep-alive'), (b'Strict-Transport-Security', b'm
+ax-age=31536000; includeSubDomains; preload'), (
+b'Access-Control-Allow-Origin', b'*'), (b'Access
+-Control-Allow-Methods', b'GET, POST, OPTIONS'),
+ (b'Access-Control-Expose-Headers', b'Content-Le
+ngth,Content-Type,Date,Server,Connection')])    
+2025-05-26 04:23:09,072 - httpx - INFO - HTTP Re
+quest: POST https://api.telegram.org/bot77002122
+71:AAHew3SOCePp4blW1ivqKJKkvIvGeCdmOLI/getUpdate
+s "HTTP/1.1 200 OK"                             
+2025-05-26 04:23:09,072 - httpcore.http11 - DEBU
+G - receive_response_body.started request=<Reque
+st [b'POST']>                                   
+2025-05-26 04:23:09,072 - httpcore.http11 - DEBU
+G - receive_response_body.complete              
+2025-05-26 04:23:09,073 - httpcore.http11 - DEBU
+G - response_closed.started                     
+2025-05-26 04:23:09,073 - httpcore.http11 - DEBU
+G - response_closed.complete                    
+2025-05-26 04:23:09,074 - telegram.ext.ExtBot - 
+DEBUG - Call to Bot API endpoint `getUpdates` fi
+nished with return value `[{'update_id': 2525571
+68, 'message': {'message_id': 1668908, 'from': {
+'id': 7260109104, 'is_bot': False, 'first_name':
+ 'Monisha', 'last_name': 'S'}, 'chat': {'id': -1
+002433956830, 'title': 'Girls chatting group', '
+type': 'supergroup'}, 'date': 1748233388, 'text'
+: 'Naa tamil ponnu pai d'}}]`                   
+2025-05-26 04:23:09,074 - telegram.ext.ExtBot - 
+DEBUG - Getting updates: [252557168]            
+2025-05-26 04:23:09,411 - __main__ - DEBUG - Run
+ning event still set, continuing...
